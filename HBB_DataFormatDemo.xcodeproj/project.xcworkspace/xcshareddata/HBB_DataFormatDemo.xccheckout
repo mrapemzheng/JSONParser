@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B158CB36-29B1-4D8A-8DD2-7979A0CC394A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HBB_DataFormatDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ab2d2767-e7b5-b340-a55c-fd930f90a9ba</key>
+		<string>https://203.88.213.161/svn/HBB_DataFormat_IOS</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HBB_DataFormatDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ab2d2767-e7b5-b340-a55c-fd930f90a9ba</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ab2d2767-e7b5-b340-a55c-fd930f90a9ba</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ab2d2767-e7b5-b340-a55c-fd930f90a9ba</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HBB_DataFormat_IOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
