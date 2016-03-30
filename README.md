@@ -5,22 +5,55 @@
 那我为什么还要写多一个库出来呢？
 * 因为我要写一个比他们更强大的库（说起来挺害羞的）
 ## 优势
-* 和JSONModel相比， 我的库只是单纯作为转化类，并不需要模型类继承JSONModel类，
+* 1.和JSONModel相比， 我的库只是单纯作为转化类，并不需要模型类继承JSONModel类，
 * 并且我写出来的库，可以自动转化（NSDate *）格式
+* 2.Hbb_JSONParser还支持"类中类"的转化
 ##支持的功能
 ## 1、json字符串转化为字典 
 ```java
   NSString *jsonStr = @"{\"date\":\"2014-06-07 12:34:54\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }";
   
  Hbb_JSONParser *hbb_JSONParser = [[Hbb_JSONParser alloc] init];
- MyObject *myObject = [hbb_JSONParser jsonStringToBean:self.jsonStr cls:[MyObject class]];
+ MyObject *myObject = [hbb_JSONParser jsonStringToDictionary:jsonStr];
 ```
-
 ## 2、json字符串转化为字典数组
+```java
+  NSString *jsonArrayStr = @"[{\"date\":\"\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }, {\"date\":\"2014-06-07 12:34:54\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }, {\"date\":\"2014-06-07 12:34:54\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }]";
+  
+ Hbb_JSONParser *hbb_JSONParser = [[Hbb_JSONParser alloc] init];
+ NSArray *beanArray = [hbb_JSONParser jsonStringToDictionaryArray:jsonArrayStr];
+```
 ## 3、json字符串转化为模型
+```java
+  NSString *jsonStr = @"{\"date\":\"2014-06-07 12:34:54\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }";
+  
+ Hbb_JSONParser *hbb_JSONParser = [[Hbb_JSONParser alloc] init];
+ MyObject *myObject = [hbb_JSONParser jsonStringToBean:jsonStr cls:[MyObject class]];
+```
 ## 4、json字符串转化为模型数组
+```java
+  NSString *jsonArrayStr = @"[{\"date\":\"\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }, {\"date\":\"2014-06-07 12:34:54\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }, {\"date\":\"2014-06-07 12:34:54\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }]";
+  
+ Hbb_JSONParser *hbb_JSONParser = [[Hbb_JSONParser alloc] init];
+ NSArray *beanArray = [hbb_JSONParser jsonStringToBeanArray:jsonArrayStr cls:[MyObject class]];
+```
 ## 6、字典转化为模型
+```java
+  NSString *jsonStr = @"{\"date\":\"2014-06-07 12:34:54\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }";
+  
+   Hbb_JSONParser *hbb_JSONParser = [[Hbb_JSONParser alloc] init];
+  NSDictionary *dict = [hbb_JSONParser jsonStringToDictionary:jsonStr];
+    MyObject *myObject = [self.hbb_JSONParser dictionaryToBean:dict cls:[MyObject class]];
+```
 ## 7、字典数组转化为模型数组
+```java
+  NSString *jsonArrayStr = @"[{\"date\":\"\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }, {\"date\":\"2014-06-07 12:34:54\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }, {\"date\":\"2014-06-07 12:34:54\",\"normalInt\":2 , \"normalLong\":24, \"myInnerObject\":{\"str\":\"字符串1\"}, \"cgfloat\":1.0, \"normalFloat\":2.0, \"array\":[\"1\", \"2\"], \"dictionary\":{\"key\":\"value\"} }]";
+  
+ Hbb_JSONParser *hbb_JSONParser = [[Hbb_JSONParser alloc] init];
+ NSArray *dictArray = [hbb_JSONParser jsonStringToDictionary:jsonArrayStr]
+ 
+ NSArray *beanArray =[hbb_JSONParser dictionaryArrayToBeanArray:dictArray cls:[MyObject class]];
+```
 ## 8、字典转化为json字符串
 ## 9、字典数组转化json字符串
 ## 10、模型转化为字典
