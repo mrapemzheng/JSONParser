@@ -148,3 +148,6 @@ Hbb_JSONParser *hbb_JSONParser = [[Hbb_JSONParser alloc] init];
 NSString *jsonArrayString = [self.hbb_JSONParser beanArrayToJsonString:self.myObjectArray cls:[MyObject class]];
 
 ```
+
+##License
+JSONParser for iOS is available under the MIT license. See the LICENSE file for more info.
