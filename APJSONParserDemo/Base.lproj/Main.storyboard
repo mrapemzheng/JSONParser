@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iWr-kX-3vz">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--JSON转化-->
+        <scene sceneID="5aQ-P1-vES">
+            <objects>
+                <viewController storyboardIdentifier="JSONParseViewController" id="tqI-rk-pH7" customClass="JSONParseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9vS-k1-eax"/>
+                        <viewControllerLayoutGuide type="bottom" id="7LZ-Cs-OLx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wBJ-h9-wL0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" delaysContentTouches="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="vWm-yo-l2A">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx7-YS-yXu">
+                                        <rect key="frame" x="20" y="15" width="191" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="m5T-xU-t5C"/>
+                                            <constraint firstAttribute="width" constant="191" id="uXi-Pg-AFJ"/>
+                                        </constraints>
+                                        <state key="normal" title="JSON字符串转化为模型对象">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="jsonStringToBean:" destination="tqI-rk-pH7" eventType="touchUpInside" id="aG3-fb-I7F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0f-xp-2pw">
+                                        <rect key="frame" x="20" y="45" width="221" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="JSON字符串转化为模型对象数组">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="jsonStringToBeanArray:" destination="tqI-rk-pH7" eventType="touchUpInside" id="Mka-C9-6Ej"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6U7-fJ-K3F">
+                                        <rect key="frame" x="20" y="75" width="191" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="模型对象转化为JSON字符串">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="beanToJsonString:" destination="tqI-rk-pH7" eventType="touchUpInside" id="agl-gi-D9M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd9-CK-ER0">
+                                        <rect key="frame" x="20" y="105" width="221" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="模型对象数组转化为JSON字符串">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="beanArrayToJsonString:" destination="tqI-rk-pH7" eventType="touchUpInside" id="LPl-3u-UOk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7a-TO-2os">
+                                        <rect key="frame" x="20" y="135" width="161" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="JSON字符串转化为字典">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="jsonStringToDictionary:" destination="tqI-rk-pH7" eventType="touchUpInside" id="6MF-08-q0c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHO-2S-wr1">
+                                        <rect key="frame" x="20" y="165" width="191" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="JSON字符串转化为字典数组">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="jsonStringToDictionaryArray:" destination="tqI-rk-pH7" eventType="touchUpInside" id="DXG-Gb-im9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNe-FE-i2p">
+                                        <rect key="frame" x="20" y="195" width="161" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="字典转化为JSON字符串">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dictionaryToJsonString:" destination="tqI-rk-pH7" eventType="touchUpInside" id="voP-ab-b5I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq2-ja-hwl">
+                                        <rect key="frame" x="20" y="225" width="191" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="字典数组转化为JSON字符串">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dictionaryArrayToJsonString:" destination="tqI-rk-pH7" eventType="touchUpInside" id="4MC-oD-ruO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbA-cy-EcJ">
+                                        <rect key="frame" x="20" y="255" width="135" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="模型对象转化为字典">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="beanToDictionary:" destination="tqI-rk-pH7" eventType="touchUpInside" id="0W0-x0-cUc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fu-Nz-cJM">
+                                        <rect key="frame" x="20" y="285" width="135" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="字典转化为模型对象">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dictionaryToBean:" destination="tqI-rk-pH7" eventType="touchUpInside" id="3VL-8a-Dmw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="fx7-YS-yXu" firstAttribute="leading" secondItem="vWm-yo-l2A" secondAttribute="leading" constant="20" id="3yr-zI-pTi"/>
+                                    <constraint firstAttribute="bottom" secondItem="fx7-YS-yXu" secondAttribute="bottom" constant="555" id="DRR-KA-yLf"/>
+                                    <constraint firstItem="fx7-YS-yXu" firstAttribute="top" secondItem="vWm-yo-l2A" secondAttribute="top" constant="15" id="W9D-rq-5L9"/>
+                                    <constraint firstAttribute="trailing" secondItem="fx7-YS-yXu" secondAttribute="trailing" constant="389" id="xiX-55-e4d"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xiX-55-e4d"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vWm-yo-l2A" secondAttribute="trailing" constant="-16" id="IHd-3R-f7n"/>
+                            <constraint firstItem="vWm-yo-l2A" firstAttribute="top" secondItem="9vS-k1-eax" secondAttribute="bottom" constant="-64" id="VcF-HG-4l6"/>
+                            <constraint firstItem="vWm-yo-l2A" firstAttribute="leading" secondItem="wBJ-h9-wL0" secondAttribute="leadingMargin" constant="-16" id="ZJV-1i-p4J"/>
+                            <constraint firstItem="7LZ-Cs-OLx" firstAttribute="top" secondItem="vWm-yo-l2A" secondAttribute="bottom" id="quR-KV-yH9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="JSON转化" id="DcT-SZ-nMV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBG-HJ-A0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2319" y="83"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uaw-pq-xpn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s1L-r9-zGk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dlr-W4-WbG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tho-yz-zx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="288"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aog-q1-Lzd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iWr-kX-3vz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="boL-Eu-ldI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tqI-rk-pH7" kind="relationship" relationship="rootViewController" id="GtB-yV-plh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YLC-tY-2lg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1507" y="83"/>
+        </scene>
+    </scenes>
+</document>

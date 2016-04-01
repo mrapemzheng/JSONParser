@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>HBB_DataFormatDemo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Hbb_DataFormatFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>18AC407C1CAEABEB00B81A99</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E0FD09D1B68DA4400FBF813</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E0FD0B61B68DA4400FBF813</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9ED699131B86E3E9005448D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9ED6991D1B86E3E9005448D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
